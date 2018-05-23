@@ -2,5 +2,6 @@
     "name": "offcloud",
     "description": "cloud download and view",
     "repository": "https://github.com/tiancheng91/offcloud",
+    "image": "tiancheng91/offcloud",
     "keywords": ["node", "heroku", "download"]
   }
