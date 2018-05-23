@@ -1,7 +1,7 @@
 #!/bin/bash
 export PATH=/opt/node8/bin:$PATH
 
-TOKEN=${TOKEN:-offline}
+TOKEN=${TOKEN:-offcloud}
 PORT=${PORT:-18080}
 
 aria2c --conf-path=conf/aria2.conf --rpc-secret=$TOKEN -D 
