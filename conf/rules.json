@@ -1,0 +1,7 @@
+{
+  "rules": [
+    {"pathname": "/jsonrpc", "dest": "http://localhost:6800/jsonrpc"},
+    {"pathname": "/ws", "dest": "http://localhost:8443/ws"},
+    {"pathname": "/**", "dest": "http://localhost:8001"}
+  ]
+}
