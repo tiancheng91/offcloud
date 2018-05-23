@@ -6,7 +6,7 @@ RUN mkdir -p /data/download && mkdir -p /data/www
 
 RUN set -ex; \
 	apt-get update; \
-	apt-get install -y --no-install-recommends aria2 wget
+	apt-get install -y --no-install-recommends aria2 wget curl
 
 RUN wget --no-check-certificate https://nodejs.org/dist/v8.11.1/node-v8.11.1-linux-x64.tar.gz \
     && tar -zxvf node-v8.11.1-linux-x64.tar.gz \
