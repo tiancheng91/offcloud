@@ -1,0 +1,11 @@
+:18080
+
+root /data/download
+browse
+
+proxy /ws 127.0.0.1:8443 {
+    websocket
+}
+proxy /jsonrpc 127.0.0.1:6800 {
+    websocket
+}
