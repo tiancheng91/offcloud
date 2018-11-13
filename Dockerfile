@@ -8,15 +8,13 @@ RUN set -ex; \
 	apt-get update; \
 	apt-get install -y --no-install-recommends aria2 wget curl
 
-RUN wget --no-check-certificate https://nodejs.org/dist/v8.11.1/node-v8.11.1-linux-x64.tar.gz \
-    && tar -zxvf node-v8.11.1-linux-x64.tar.gz \
-    && mv node-v8.11.1-linux-x64 /opt/node8
+RUN wget --no-check-certificate https://caddyserver.com/download/linux/amd64?license=personal&telemetry=on -O caddy.tar.gz \
+    && tar -zxvf caddy.tar.gz \
+    && mv 
 
 RUN wget --no-check-certificate https://github.com/ginuerzh/gost/releases/download/v2.5/gost_2.5_linux_amd64.tar.gz -O gost.tar.gz \
     && tar -zxvf gost.tar.gz \
     && mv gost_2.5_linux_amd64/gost /usr/local/bin/
-
-RUN export PATH=/opt/node8/bin:$PATH && npm install -g serve micro-proxy
 
 RUN rm /bin/sh && ln -s /bin/bash /bin/sh
 
