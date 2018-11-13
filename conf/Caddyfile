@@ -2,6 +2,11 @@
 
 root /data/download
 browse
+mime {
+    .mp4 video/mp4
+    .mkv video/mp4
+    .mp3 audio/mp3
+}
 
 proxy /ws 127.0.0.1:8443 {
     websocket
