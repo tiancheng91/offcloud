@@ -1,4 +1,4 @@
-:18080
+:{$PORT}
 
 root /data/download
 browse
