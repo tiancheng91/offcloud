@@ -6,7 +6,7 @@ RUN mkdir -p /data/download && mkdir -p /data/www
 
 RUN set -ex; \
 	apt-get update; \
-	apt-get install -y --no-install-recommends aria2 wget curl unzip openssh bash python python3
+	apt-get install -y --no-install-recommends aria2 wget curl unzip openssl bash python python3
 
 RUN wget --no-check-certificate "https://caddyserver.com/download/linux/amd64?license=personal&telemetry=on" -O caddy.tar.gz \
     && tar -zxvf caddy.tar.gz \
@@ -18,7 +18,7 @@ RUN wget --no-check-certificate https://github.com/ginuerzh/gost/releases/downlo
 
 RUN wget --no-check-certificate https://github.com/ncw/rclone/releases/download/v1.45/rclone-v1.45-linux-amd64.zip -O rclone.zip \
     && unzip rclone.zip \
-    && mv rclone-v1.45-linux-amd64/rclone /user/local/bin/
+    && mv rclone-v1.45-linux-amd64/rclone /usr/local/bin/
 
 RUN rm /bin/sh && ln -s /bin/bash /bin/sh
 
