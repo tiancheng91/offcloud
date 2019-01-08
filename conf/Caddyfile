@@ -10,10 +10,6 @@ mime {
     .png image/png
 }
 
-proxy /drive/ 127.0.0.1:8080 {
-    basicauth / root coding
-}
-
 proxy /ws 127.0.0.1:8443 {
     websocket
 }
