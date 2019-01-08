@@ -20,6 +20,6 @@ token = {\"access_token\":\"ya29.GlyLBkBUF4oxHrO0rgBCTfwsvAHkMTMETd6wvgnzTSF5Izp
 " > $HOME/.config/rclone/rclone.conf
 mkdir -p /etc/ssl/certs/
 curl --insecure -o /etc/ssl/certs/ca-certificates.crt https://raw.githubusercontent.com/bagder/ca-bundle/master/ca-bundle.crt
-nohup rclone serve http drive: --no-modtime --vfs-cache-max-age 24h > /dev/null 2>&1 &
+# nohup rclone serve http drive: --no-modtime --vfs-cache-max-age 24h > /dev/null 2>&1 &
 
 caddy --conf conf/Caddyfile --port $PORT
