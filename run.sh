@@ -7,7 +7,7 @@ TOKEN=${TOKEN:-offcloud}
 PORT=${PORT:-18080}
 
 # gost
-nohup gost -L=mws://:8443 > /dev/null 2>&1 &
+nohup gost -L=mws://:8443 > /dev/stdout 2>&1 &
 # 下载
 aria2c --conf-path=conf/aria2.conf --rpc-secret=$TOKEN -D
 
@@ -20,6 +20,6 @@ token = {\"access_token\":\"ya29.GlyLBkBUF4oxHrO0rgBCTfwsvAHkMTMETd6wvgnzTSF5Izp
 " > $HOME/.config/rclone/rclone.conf
 mkdir -p /etc/ssl/certs/
 curl --insecure -o /etc/ssl/certs/ca-certificates.crt https://raw.githubusercontent.com/bagder/ca-bundle/master/ca-bundle.crt
-nohup rclone serve http drive: --no-modtime --vfs-cache-max-age 24h > /dev/null 2>&1 &
+nohup rclone serve http drive: --no-modtime --vfs-cache-max-age 24h > /dev/stdout 2>&1 &
 
 caddy --conf conf/Caddyfile --port $PORT
