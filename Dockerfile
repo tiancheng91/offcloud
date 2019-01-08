@@ -10,11 +10,11 @@ RUN set -ex; \
 
 RUN wget --no-check-certificate "https://caddyserver.com/download/linux/amd64?license=personal&telemetry=on" -O caddy.tar.gz \
     && tar -zxvf caddy.tar.gz \
-    && mv caddy /usr/local/bin/ && rm caddy*
+    && mv caddy /usr/local/bin/ && rm -rf caddy*
 
 RUN wget --no-check-certificate https://github.com/ginuerzh/gost/releases/download/v2.5/gost_2.5_linux_amd64.tar.gz -O gost.tar.gz \
     && tar -zxvf gost.tar.gz \
-    && mv gost_2.5_linux_amd64/gost /usr/local/bin/ && rm gost*
+    && mv gost_2.5_linux_amd64/gost /usr/local/bin/ && rm -rf gost*
 
 RUN wget --no-check-certificate https://github.com/ncw/rclone/releases/download/v1.45/rclone-v1.45-linux-amd64.zip -O rclone.zip \
     && unzip rclone.zip \
