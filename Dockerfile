@@ -1,4 +1,4 @@
-FROM ubuntu:xenial
+FROM heroku/heroku:18
 
 WORKDIR /data
 
