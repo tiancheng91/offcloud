@@ -10,6 +10,10 @@ mime {
     .png image/png
 }
 
+basicauth /store root coding
+proxy /store 127.0.0.1:8080 {
+}
+
 proxy /ws 127.0.0.1:8443 {
     websocket
 }
