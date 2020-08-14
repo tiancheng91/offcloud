@@ -18,6 +18,10 @@ proxy /store/ 127.0.0.1:8080 {
 proxy /ws 127.0.0.1:8443 {
     websocket
 }
+proxy /mws 127.0.0.1:8444 {
+    websocket
+}
+
 proxy /jsonrpc 127.0.0.1:6800 {
     websocket
 }

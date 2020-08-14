@@ -7,7 +7,9 @@ TOKEN=${TOKEN:-offcloud}
 PORT=${PORT:-18080}
 
 # gost
-nohup gost -L=mws://:8443 > /dev/stdout 2>&1 &
+nohup gost -L="ws://:8443?path=/ws&rbuf=4096&wbuf=4096" > /dev/stdout 2>&1 &
+nohup gost -L="mws://:8444?path=/mws&rbuf=4096&wbuf=4096" > /dev/stdout 2>&1 &
+
 # 下载
 aria2c --conf-path=conf/aria2.conf --rpc-secret=$TOKEN -D
 
